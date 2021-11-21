@@ -1,0 +1,24 @@
+body {
+  background-color: #eee;
+}
+
+h1,
+h2 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+
+  background-color: #fff;
+  max-width: 800px;
+  height: auto;
+  padding: 20px;
+  margin: 60px auto;
+}
+
+.btn {
+  margin: 20px 0 0;
+}
