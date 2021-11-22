@@ -66,11 +66,10 @@ app.use((req, res, next) => {
 });
 
 // routers
-app.use('/collections', collectionRoutes)
-app.use('/', authRoutes)
+app.use('/collections', collectionRoutes);
+app.use('/', authRoutes);
 
-app.get('/', CollectionControler.showCollections)
-
+app.get('/', CollectionControler.showCollections);
 
 app.get('/registrar', (req, res) => {
   res.render('registrar');
