@@ -12,6 +12,13 @@ const conn = require('./db/conn');
 const Collection = require('./models/Collection');
 const User = require('./models/User');
 
+// import routes
+const collectionRoutes = require('./routes/collectionsRoutes');
+const authRoutes = require('./routes/authRoutes');
+
+//import controller
+const CollectionControler = require('./controllers/CollectionControler');
+
 app.engine('handlebars', exphbs.engine());
 app.set('view engine', 'handlebars');
 
@@ -57,6 +64,13 @@ app.use((req, res, next) => {
 
   next();
 });
+
+// routers
+app.use('/collections', collectionRoutes)
+app.use('/', authRoutes)
+
+app.get('/', CollectionControler.showCollections)
+
 
 app.get('/registrar', (req, res) => {
   res.render('registrar');
