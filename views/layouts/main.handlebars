@@ -46,11 +46,19 @@
         </div>
       </div>
     </nav>
-    <!-- Corpo da página -->
 
+    <!-- mESSAGES -->
+    {{#if messages.message}}
+      <div class='message'>
+        {{messages.message}}
+      </div>
+    {{/if}}
+    <!-- Corpo da página -->
     {{{body}}}
 
     <!-- Footer -->
-    <footer></footer>
+    <footer>
+      <p><span>Collection Manager</span> &copy; 2021</p>
+    </footer>
   </body>
 </html>

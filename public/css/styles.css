@@ -17,8 +17,8 @@ h1 {
   flex-direction: column;
 
   background-color: #fff;
-  max-width: 800px;
   height: auto;
+  width: auto;
   padding: 20px;
   margin: 60px auto;
 }
@@ -86,4 +86,36 @@ form input[type='submit']:hover,
 .btn:hover {
   background-color: yellowgreen;
   color: #fff;
+}
+
+/* Messages */
+.message {
+  padding: 1em;
+  color: #2d2d2d;
+  background-color: #e0f0c0;
+  border: 1px solid yellowgreen;
+  border-radius: 5px;
+  text-align: center;
+  margin: 2em auto -1.5em;
+  max-width: 30%;
+}
+
+/* footer */
+footer {
+  width: 100%;
+  background-color: #0d0d0d;
+  padding: 1.7em 0;
+  color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+
+  position: absolute;
+  bottom: 0;
+}
+
+footer span {
+  color: yellowgreen;
+  font-weight: bold;
 }
