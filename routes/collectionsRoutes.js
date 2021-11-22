@@ -1,8 +1,11 @@
-const express = require('express')
-const router = express.Router()
-const CollectionControler = require('../controllers/CollectionControler')
+const express = require('express');
+const router = express.Router();
+const CollectionControler = require('../controllers/CollectionControler');
 
+// helper
+const checkAuth = require('../helpers/auth').checkAuth;
 
-router.get('/', CollectionControler.showCollections)
+router.get('/dashboard', checkAuth, CollectionControler.dashboard);
+router.get('/', CollectionControler.showCollections);
 
-module.exports = router
+module.exports = router;

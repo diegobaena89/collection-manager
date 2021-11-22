@@ -12,6 +12,12 @@ h1 {
   margin: 20px 0;
 }
 
+.container-fluid .navbar-brand {
+  color: yellowgreen;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -68,8 +74,8 @@ h1 {
 
 form input[type='submit'],
 .btn {
-  background-color: transparent;
-  color: yellowgreen;
+  background-color: yellowgreen;
+  color: white;
   border: 1px solid yellowgreen;
   padding: 0.5em 1.2em;
   margin: 1em 0;
@@ -84,8 +90,9 @@ form input[type='submit'],
 
 form input[type='submit']:hover,
 .btn:hover {
-  background-color: yellowgreen;
-  color: #fff;
+  background-color: transparent;
+  color: yellowgreen;
+  border: 1px solid yellowgreen;
 }
 
 /* Messages */
