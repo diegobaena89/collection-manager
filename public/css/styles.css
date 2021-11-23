@@ -107,6 +107,34 @@ form input[type='submit']:hover,
   max-width: 30%;
 }
 
+/* collections */
+.collection-form-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.collection-form-container a {
+  margin-top: 2.5em;
+  color: yellowgreen;
+}
+
+.collection-form-container a:hover {
+  color: #2d2d2d;
+}
+
+.collection-form-container h1 {
+  margin: 1em 0 0em;
+  border-left: 5px solid yellowgreen;
+  padding: 0.3em;
+  width: 100px;
+}
+
+.collection-form-container form {
+  margin-top: 1.5em;
+}
+
 /* footer */
 footer {
   width: 100%;

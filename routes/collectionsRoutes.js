@@ -5,6 +5,8 @@ const CollectionControler = require('../controllers/CollectionControler');
 // helper
 const checkAuth = require('../helpers/auth').checkAuth;
 
+router.get('/add', checkAuth, CollectionControler.createCollection);
+router.post('/add', checkAuth, CollectionControler.createCollectionSave);
 router.get('/dashboard', checkAuth, CollectionControler.dashboard);
 router.get('/', CollectionControler.showCollections);
 

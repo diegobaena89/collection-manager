@@ -1,0 +1,31 @@
+<div class='collection-form-container'>
+  <a href='/collections/dashboard'>Go back</a>
+  <h1>Add Collection</h1>
+  <form action='/collections/add' method='POST'>
+    <div class='form-control'>
+      <label for='title'>Title</label>
+      <input
+        type='text'
+        name='title'
+        placeholder='Enter the name of your Collections'
+      />
+    </div>
+    <div class='form-control'>
+      <label for='author'>Author</label>
+      <input
+        type='text'
+        name='author'
+        placeholder='Enter the name of the Author'
+      />
+    </div>
+    <div class='form-control'>
+      <label for='image'>Image URL</label>
+      <input
+        type='text'
+        name='image'
+        placeholder='Enter the img URL do display the Collection'
+      />
+    </div>
+    <input type='submit' value='Create Collection' />
+  </form>
+</div>
