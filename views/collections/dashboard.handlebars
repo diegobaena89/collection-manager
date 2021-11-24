@@ -1,26 +1,39 @@
 <div class='dashboard'>
-  <div class='title-container'>
-    <h3>Dashboard</h3>
-    <a
-      href='/collections/add'
-      style='width: 50%; display: flex; margin: 0 auto; justify-content: center'
-      class='btn'
-    >Add Collection</a>
-  </div>
   <div class='container'>
-    <h3>Manage Your Collections</h3>
+
+  <div class='container'>
+    <h2 style='margin-top: 2em;'>Manage Your Collections</h2>
+    <br>
+          <a
+        href='/collections/add'
+        class='btn2'
+      ><i class="bi bi-plus-circle"></i> Add</a>
+      <hr>
     <ul>
       {{#each collections}}
         {{!-- <li>{{this.title}}</li> --}}
         <li>
-          <div class='card text-center' style='width: 25em;'>
-            <img src='...' class='card-img-top' alt='...' />
+          <div
+            class='card text-center shadow p-3 mb-5 bg-body rounded'
+            style='width: 25em;'
+          >
+            <img src='{{this.image}}' class='card-img-top' style="height: 350px; width: auto;"  />
             <h5 class='card-header'>{{this.title}}</h5>
             <div class='card-body'>
               <p class='card-text'>Some quick example text to build on the card
                 title and make up the bulk of the card's content.</p>
               <p class='card-text'><small class='text-muted'>Tags</small></p>
             </div>
+            <ul class='list-group list-group-flush'>
+              <li class='list-group-item'>
+                <button type='button' class='btn btn-warning'><i
+                    class='bi bi-pencil'
+                  ></i></button>
+                <button type='button' class='btn btn-danger'><i
+                    class='bi bi-trash'
+                  ></i></button>
+              </li>
+            </ul>
             <div class='card-footer text-muted'>{{this.author}}</div>
           </div>
         </li>

@@ -29,7 +29,7 @@ h1 {
   margin: 60px auto;
 }
 
-.btn {
+.btn-custom {
   margin: 20px 0 0;
 }
 
@@ -73,7 +73,7 @@ h1 {
 }
 
 form input[type='submit'],
-.btn {
+.btn-custom {
   background-color: yellowgreen;
   color: white;
   border: 1px solid yellowgreen;
@@ -88,8 +88,28 @@ form input[type='submit'],
   width: 100%;
 }
 
+.btn2 {
+  background-color: yellowgreen;
+  color: white;
+  border: 1px solid yellowgreen;
+  padding: 0.5em 1.2em;
+  margin: 1em 0;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.5s;
+}
+
 form input[type='submit']:hover,
-.btn:hover {
+.btn-custom:hover {
+  background-color: transparent;
+  color: yellowgreen;
+  border: 1px solid yellowgreen;
+}
+
+.btn2:hover {
   background-color: transparent;
   color: yellowgreen;
   border: 1px solid yellowgreen;
@@ -173,7 +193,11 @@ form input[type='submit']:hover,
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+.dashboard ul li button {
+  margin: 0 0.6em;
 }
 /* footer */
 footer {
@@ -184,9 +208,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed;
 
-  position: absolute;
   bottom: 0;
 }
 
