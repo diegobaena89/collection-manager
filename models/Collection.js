@@ -20,6 +20,10 @@ const Collection = db.define('Collection', {
     type: DataTypes.STRING,
     require: true,
   },
+  description: {
+    type: DataTypes.STRING,
+    require: true,
+  },
 });
 
 Collection.belongsTo(User);

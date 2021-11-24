@@ -37,6 +37,7 @@ module.exports = class CollectionControler {
       title: req.body.title,
       author: req.body.author,
       image: req.body.image,
+      description: req.body.description,
       UserId: req.session.userid,
     };
 
@@ -50,6 +51,23 @@ module.exports = class CollectionControler {
       });
     } catch (error) {
       console.log(`An error has occurred: ${error}`);
+    }
+  }
+
+  static async removeCollection(req, res) {
+    const id = req.body.id;
+    const UserId = req.session.userid;
+
+    try {
+      await Collection.destroy({ where: { id: id, UserId: UserId } });
+
+      req.flash('message', 'Collection removed successfully!');
+
+      req.session.save(() => {
+        res.redirect('/collections/dashboard');
+      });
+    } catch (error) {
+      console.log(`Aconteceu um erro: ${error}`);
     }
   }
 };

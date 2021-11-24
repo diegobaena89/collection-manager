@@ -17,11 +17,10 @@
             class='card text-center shadow p-3 mb-5 bg-body rounded'
             style='width: 25em;'
           >
-            <img src='{{this.image}}' class='card-img-top' style="height: 350px; width: auto;"  />
+            <img src='{{this.image}}' class='card-img-top' style="height: 250px; width: 100%; "  />
             <h5 class='card-header'>{{this.title}}</h5>
             <div class='card-body'>
-              <p class='card-text'>Some quick example text to build on the card
-                title and make up the bulk of the card's content.</p>
+              <p class='card-text'>{{this.description}}</p>
               <p class='card-text'><small class='text-muted'>Tags</small></p>
             </div>
             <ul class='list-group list-group-flush'>
@@ -29,9 +28,12 @@
                 <button type='button' class='btn btn-warning'><i
                     class='bi bi-pencil'
                   ></i></button>
-                <button type='button' class='btn btn-danger'><i
-                    class='bi bi-trash'
-                  ></i></button>
+                <form action="/collections/remove" method="post">
+                  <input type="hidden" name="id" value="{{this.id}}">
+                  <button type="submit"class='btn btn-danger'>
+                    <i class="bi bi-trash"></i>
+                  </button>
+                </form>
               </li>
             </ul>
             <div class='card-footer text-muted'>{{this.author}}</div>
