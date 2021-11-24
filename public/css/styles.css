@@ -135,6 +135,46 @@ form input[type='submit']:hover,
   margin-top: 1.5em;
 }
 
+/* dashboard */
+.title-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1.5em;
+}
+
+.title-container h2 {
+  border-left: 4px solid yellowgreen;
+  padding: 10px;
+}
+
+.title-container h3 {
+  margin: 1.5em;
+  text-align: center;
+  border-left: 4px solid yellowgreen;
+  width: 100px;
+  padding: 0.3em;
+}
+
+.dashboard {
+  height: auto;
+}
+
+.dashboard ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dashboard ul li {
+  padding: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
 /* footer */
 footer {
   width: 100%;

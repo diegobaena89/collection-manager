@@ -1,7 +1,30 @@
 <div class='dashboard'>
   <div class='title-container'>
     <h3>Dashboard</h3>
-    <a href='/collections/add' class='btn'>Add Collection</a>
+    <a
+      href='/collections/add'
+      style='width: 50%; display: flex; margin: 0 auto; justify-content: center'
+      class='btn'
+    >Add Collection</a>
   </div>
-  <h3>Your Collections</h3>
+  <div class='container'>
+    <h3>Manage Your Collections</h3>
+    <ul>
+      {{#each collections}}
+        {{!-- <li>{{this.title}}</li> --}}
+        <li>
+          <div class='card text-center' style='width: 25em;'>
+            <img src='...' class='card-img-top' alt='...' />
+            <h5 class='card-header'>{{this.title}}</h5>
+            <div class='card-body'>
+              <p class='card-text'>Some quick example text to build on the card
+                title and make up the bulk of the card's content.</p>
+              <p class='card-text'><small class='text-muted'>Tags</small></p>
+            </div>
+            <div class='card-footer text-muted'>{{this.author}}</div>
+          </div>
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 </div>

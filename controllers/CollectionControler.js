@@ -1,3 +1,4 @@
+const { col } = require('sequelize/dist');
 const Collection = require('../models/Collection');
 const User = require('../models/User');
 
@@ -7,7 +8,24 @@ module.exports = class CollectionControler {
   }
 
   static async dashboard(req, res) {
-    res.render('collections/dashboard');
+    const userId = req.session.userid;
+
+    const user = await User.findOne({
+      where: {
+        id: userId,
+      },
+      include: Collection,
+      plain: true,
+    });
+
+    // check if user exists
+    if (!user) {
+      res.redirect('/login');
+    }
+
+    const collections = user.Collections.map((result) => result.dataValues);
+
+    res.render('collections/dashboard', { collections });
   }
 
   static createCollection(req, res) {
@@ -19,7 +37,7 @@ module.exports = class CollectionControler {
       title: req.body.title,
       author: req.body.author,
       image: req.body.image,
-      id: req.session.userid,
+      UserId: req.session.userid,
     };
 
     try {
