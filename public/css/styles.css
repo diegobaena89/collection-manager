@@ -200,6 +200,18 @@ form input[type='submit']:hover,
   margin: 0 0.6em;
 }
 
+.dashboard .linkNew {
+  color: yellowgreen;
+}
+
+.dashboard .card {
+  transition: 0.3s;
+}
+
+.dashboard .card:hover {
+  transform: scale(1.025);
+}
+
 /* footer */
 footer {
   width: 100%;

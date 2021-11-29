@@ -25,7 +25,13 @@ module.exports = class CollectionControler {
 
     const collections = user.Collections.map((result) => result.dataValues);
 
-    res.render('collections/dashboard', { collections });
+    let emptyCollections = false;
+
+    if (collections.length === 0) {
+      emptyCollections = true;
+    }
+
+    res.render('collections/dashboard', { collections, emptyCollections });
   }
 
   static createCollection(req, res) {
