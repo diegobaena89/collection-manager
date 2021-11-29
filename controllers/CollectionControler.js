@@ -76,4 +76,15 @@ module.exports = class CollectionControler {
       console.log(`Aconteceu um erro: ${error}`);
     }
   }
+
+  static async updateCollection(req, res) {
+    const id = req.params.id;
+
+    const collection = await Collection.findOne({
+      where: { id: id },
+      raw: true,
+    });
+
+    res.render('collections/edit', { collection });
+  }
 };

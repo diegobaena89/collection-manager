@@ -25,9 +25,9 @@
             </div>
             <ul class='list-group list-group-flush'>
               <li class='list-group-item'>
-                <button type='button' class='btn btn-warning'><i
+                <a href="/collections/edit/{{this.id}}" type='button' class='btn btn-warning'><i
                     class='bi bi-pencil'
-                  ></i></button>
+                  ></i></a>
                 <form action="/collections/remove" method="post">
                   <input type="hidden" name="id" value="{{this.id}}">
                   <button type="submit"class='btn btn-danger'>

@@ -1,0 +1,45 @@
+<div class='collection-form-container'>
+  <a href='/collections/dashboard'>Go back</a>
+  <h1>Edit Collection</h1>
+  <form action='/collections/edit' method='POST'>
+    <input type='hidden' name='id' value='{{collection.id}}' />
+    <div class='form-control'>
+      <label for='title'>Title</label>
+      <input
+        type='text'
+        name='title'
+        placeholder='Enter the name of your Collections'
+        value='{{collection.title}}'
+      />
+    </div>
+    <div class='form-control'>
+      <label for='author'>Author</label>
+      <input
+        type='text'
+        name='author'
+        placeholder='Enter the name of the Author'
+        value='{{collection.author}}'
+      />
+    </div>
+    <div class='form-control'>
+      <label for='image'>Image URL</label>
+      <input
+        type='text'
+        name='image'
+        placeholder='Enter the img URL do display the Collection'
+        value='{{collection.image}}'
+      />
+    </div>
+    <div class='form-control'>
+      <label for='author'>Description</label>
+      <textarea
+        type='text'
+        name='description'
+        value='{{collection.description}}'
+        placeholder='Enter the description of your collection'
+      ></textarea>
+    </div>
+
+    <input type='submit' value='Edit Collection' />
+  </form>
+</div>
