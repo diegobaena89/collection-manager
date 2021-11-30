@@ -73,7 +73,7 @@ module.exports = class CollectionControler {
         res.redirect('/collections/dashboard');
       });
     } catch (error) {
-      console.log(`Aconteceu um erro: ${error}`);
+      console.log(`An error has occurred: ${error}`);
     }
   }
 
@@ -86,5 +86,28 @@ module.exports = class CollectionControler {
     });
 
     res.render('collections/edit', { collection });
+  }
+
+  static async updateCollectionSave(req, res) {
+    const id = req.body.id;
+
+    const collection = {
+      title: req.body.title,
+      author: req.body.author,
+      image: req.body.image,
+      description: req.body.description,
+    };
+
+    await Collection.update(collection, { where: { id: id } });
+
+    try {
+      req.flash('message', 'Collection updated successfully!');
+
+      req.session.save(() => {
+        res.redirect('/collections/dashboard');
+      });
+    } catch (error) {
+      console.log(`An error has occurred: ${error}`);
+    }
   }
 };
