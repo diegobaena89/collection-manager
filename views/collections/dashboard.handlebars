@@ -11,20 +11,28 @@
       <hr>
     <ul>
       {{#each collections}}
-        {{!-- <li>{{this.title}}</li> --}}
         <li>
           <div
             class='card text-center shadow  mb-5 bg-body rounded'
-            style='width: 25em;'
-          >
-            <img src='{{this.image}}' class='card-img-top' style="height: 250px; width: 100%; "  />
+            style='width: 20em; min-height: 30em;'>
+            <!-- Card Favorite Icon -->
+             <ul class="list-group list-group-flush">
+              <li class="list-group-item" style="display: flex; justify-content:end"><i class="bi bi-star" ></i></li>
+            </ul>
+            <!-- Card Image -->
+            <img src='{{this.image}}' class='card-img-top' style="height: 200px; width: 100%; "  />
+            <!-- Card Title -->
             <h5 class='card-header text-uppercase '>{{this.title}}</h5>
             <div class='card-body'>
+              <!-- Card Description -->
               <p class='card-text'>{{this.description}}</p>
               {{!-- <p class='card-text'><small class='text-muted'>Tags</small></p> --}}
             </div>
-            <ul class='list-group list-group-flush'>
-              <li class='list-group-item'>
+            <!-- Card Author -->
+            <div class=' text-muted'>{{this.author}}</div>
+            <!-- Card Buttons -->
+            <ul class='list-group list-group-flush card-footer'>
+              <li class='list-group-item '>
                 <a href="/collections/edit/{{this.id}}" type='button' class='btn btn-outline-warning'><i
                     class='bi bi-pencil'
                   ></i></a>
@@ -34,9 +42,11 @@
                     <i class="bi bi-trash"></i>
                   </button>
                 </form>
+                <a class='btn btn-outline-primary'>
+                  <i class="bi bi-send"></i>
+                  </a>
               </li>
             </ul>
-            <div class='card-footer text-muted'>{{this.author}}</div>
           </div>
         </li>
       {{/each}}
