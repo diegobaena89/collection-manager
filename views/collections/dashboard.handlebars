@@ -14,23 +14,23 @@
         {{!-- <li>{{this.title}}</li> --}}
         <li>
           <div
-            class='card text-center shadow p-3 mb-5 bg-body rounded'
+            class='card text-center shadow  mb-5 bg-body rounded'
             style='width: 25em;'
           >
             <img src='{{this.image}}' class='card-img-top' style="height: 250px; width: 100%; "  />
-            <h5 class='card-header'>{{this.title}}</h5>
+            <h5 class='card-header text-uppercase '>{{this.title}}</h5>
             <div class='card-body'>
               <p class='card-text'>{{this.description}}</p>
-              <p class='card-text'><small class='text-muted'>Tags</small></p>
+              {{!-- <p class='card-text'><small class='text-muted'>Tags</small></p> --}}
             </div>
             <ul class='list-group list-group-flush'>
               <li class='list-group-item'>
-                <a href="/collections/edit/{{this.id}}" type='button' class='btn btn-warning'><i
+                <a href="/collections/edit/{{this.id}}" type='button' class='btn btn-outline-warning'><i
                     class='bi bi-pencil'
                   ></i></a>
                 <form action="/collections/remove" method="post">
                   <input type="hidden" name="id" value="{{this.id}}">
-                  <button type="submit"class='btn btn-danger'>
+                  <button type="submit"class='btn btn-outline-danger'>
                     <i class="bi bi-trash"></i>
                   </button>
                 </form>
