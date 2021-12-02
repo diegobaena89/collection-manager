@@ -1,15 +1,28 @@
-<div class='home-header container'>
-  <h1>Shared Collections</h1>
-</div>
-
 <div class='parent'>
-  <div class='div1'> </div>
-  <div class='div2'>
-    <div class='collections-container'>
-      {{#each collections}}
-        <h2>{{this.title}}</h2>
-        <p>{{this.User.name}}</p>
-      {{/each}}
+  <div class='div1'>
+
+    <form action='/' method='get'>
+      <input type='text' name='search' placeholder='Search a collection' />
+      <input type='submit' value='Search' />
+    </form>
+
+    <div class='order-container'>
+      <span>Order by:</span>
+      <form action='/' method='get'>
+        <input type='hidden' name='search' value='{{this.search}}' />
+        <input type='hidden' name='order' value='new' />
+        <button type='submit'><i class='bi bi-arrow-up'></i></button>
+      </form>
+      <form action='/' method='get'>
+        <input type='hidden' name='search' value='{{this.search}}' />
+        <input type='hidden' name='order' value='old' />
+        <button type='submit'><i class='bi bi-arrow-down'></i></button>
+      </form>
+      <a href='/'>Clean</a>
     </div>
+
   </div>
+  <div class='div2'> </div>
+  <div class='div3'> </div>
+  <div class='div4'> </div>
 </div>
