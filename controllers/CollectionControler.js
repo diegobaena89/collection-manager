@@ -4,7 +4,15 @@ const User = require('../models/User');
 
 module.exports = class CollectionControler {
   static async showCollections(req, res) {
-    res.render('collections/home');
+    const collectionsData = await Collection.findAll({
+      include: User,
+    });
+
+    const collections = collectionsData.map((result) =>
+      result.get({ plain: true }),
+    );
+
+    res.render('collections/home', { collections });
   }
 
   static async dashboard(req, res) {
