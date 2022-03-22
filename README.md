@@ -4,13 +4,15 @@
 
 ![badge](https://badgen.net/badge/languages/3/:color?)  ![badge](https://badgen.net/badge/made_by/diegobaena89/:color?) 
 
-[Project](#project) | [Tecnologies](#tecnologies) | [Launch](#launch)
+[Project](#project) | [Tecnologies](#tecnologies) | [Features](#features)| [Launch](#launch)
 
 
 <img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>  <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>    ![Sequelize](https://img.shields.io/badge/Sequelize-52B0E7?style=for-the-badge&logo=Sequelize&logoColor=white) <img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/>   <img alt="CSS3" src="https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white"/> 
 
 
 </div>
+
+![crud-collection-manager](https://github.com/diegobaena89/crud-collection-manager/blob/main/crudCollection.gif?raw=true "crud-collection-manager")
 
 
 📝 <a id="project"> **Project** </a>
@@ -27,6 +29,17 @@ In this project I decided to create a platform to managing personal collections.
 - ![Express](https://expressjs.com/pt-br/)
 - ![Css3](https://www.w3schools.com/css/)
 - ![Sequelize](https://sequelize.org/)
+
+---
+
+🚀 <a id="features"> **Features** </a>
+
+- [x] Login/Logout 
+- [x] Create, Update and Delete a Collection
+- [ ] Send Collection to a friend
+- [ ] OAuth
+- [ ] Dashboard
+- [ ] Image upload 
 
 ---
 
