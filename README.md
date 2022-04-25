@@ -2,7 +2,7 @@
 
 **Collection Manager**
 
-![badge](https://badgen.net/badge/languages/3/:color?)  ![badge](https://badgen.net/badge/made_by/diegobaena89/:color?) 
+![badge](https://badgen.net/badge/languages/3/:color?) ![badge](https://badgen.net/badge/made_by/diegobaena89/:color?) 
 
 [Project](#project) | [Tecnologies](#tecnologies) | [Features](#features)| [Launch](#launch)
 
